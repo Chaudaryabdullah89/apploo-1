@@ -53,8 +53,8 @@ const AddBlog = () => {
       });
 
       if (response.data) {
-        toast.success('Blog post created successfully!');
-        navigate('/admin/blogs');
+      toast.success('Blog post created successfully!');
+      navigate('/admin/blogs');
       }
     } catch (error) {
       console.error('Error creating blog post:', error);
@@ -79,15 +79,15 @@ const AddBlog = () => {
 
         <div className="bg-white rounded-lg shadow-sm p-6">
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
+          <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Title
-              </label>
-              <input
-                type="text"
-                name="title"
-                value={formData.title}
-                onChange={handleChange}
+              Title
+            </label>
+            <input
+              type="text"
+              name="title"
+              value={formData.title}
+              onChange={handleChange}
                 required
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
               />
@@ -104,17 +104,17 @@ const AddBlog = () => {
                 required
                 rows="2"
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
-              />
-            </div>
+            />
+          </div>
 
-            <div>
+          <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Content
-              </label>
-              <textarea
-                name="content"
-                value={formData.content}
-                onChange={handleChange}
+              Content
+            </label>
+            <textarea
+              name="content"
+              value={formData.content}
+              onChange={handleChange}
                 required
                 rows="10"
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
@@ -133,10 +133,10 @@ const AddBlog = () => {
                   onChange={handleChange}
                   required
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
-                />
-              </div>
+            />
+          </div>
 
-              <div>
+          <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Category
                 </label>
@@ -160,13 +160,13 @@ const AddBlog = () => {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Tags (comma-separated)
-              </label>
-              <input
-                type="text"
-                name="tags"
-                value={formData.tags}
-                onChange={handleChange}
+              Tags (comma-separated)
+            </label>
+            <input
+              type="text"
+              name="tags"
+              value={formData.tags}
+              onChange={handleChange}
                 placeholder="e.g., fashion, lifestyle, trends"
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
               />
@@ -183,39 +183,39 @@ const AddBlog = () => {
                 accept="image/*"
                 required
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
-              />
-            </div>
+            />
+          </div>
 
-            <div>
+          <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Status
-              </label>
-              <select
-                name="status"
-                value={formData.status}
-                onChange={handleChange}
+              Status
+            </label>
+            <select
+              name="status"
+              value={formData.status}
+              onChange={handleChange}
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
-              >
-                <option value="draft">Draft</option>
-                <option value="published">Published</option>
-              </select>
-            </div>
+            >
+              <option value="draft">Draft</option>
+              <option value="published">Published</option>
+            </select>
+          </div>
 
             <div className="flex justify-end space-x-4">
               <button
                 type="button"
                 onClick={() => navigate('/admin/blogs')}
                 className="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50"
-              >
+                  >
                 Cancel
               </button>
-              <button
-                type="submit"
+            <button
+              type="submit"
                 className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800"
-              >
+            >
                 Create Blog Post
-              </button>
-            </div>
+            </button>
+          </div>
           </form>
         </div>
       </div>

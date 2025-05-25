@@ -53,8 +53,8 @@ const EditProduct = () => {
     const { name, value, type, files } = e.target;
     
     if (type === 'file') {
-      setFormData(prev => ({ 
-        ...prev, 
+    setFormData(prev => ({
+      ...prev,
         newImages: Array.from(files)
       }));
     } else {
@@ -80,7 +80,7 @@ const EditProduct = () => {
       if (formData.newImages.length > 0) {
         formData.newImages.forEach(image => {
           formDataToSend.append('images', image);
-        });
+          });
       }
 
       const response = await api.put(`/api/products/${id}`, formDataToSend, {
@@ -91,7 +91,7 @@ const EditProduct = () => {
 
       if (response.data) {
         toast.success('Product updated successfully!');
-        navigate('/admin/products');
+      navigate('/admin/products');
       }
     } catch (error) {
       console.error('Error updating product:', error);
@@ -116,36 +116,36 @@ const EditProduct = () => {
 
         <div className="bg-white rounded-lg shadow-sm p-6">
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Product Name
                 </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
                 />
-              </div>
+            </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Price
                 </label>
-                <input
-                  type="number"
-                  name="price"
-                  value={formData.price}
-                  onChange={handleChange}
-                  required
-                  min="0"
-                  step="0.01"
+                    <input
+                      type="number"
+                      name="price"
+                      value={formData.price}
+                      onChange={handleChange}
+                      required
+                      min="0"
+                      step="0.01"
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
-                />
-              </div>
+                    />
+                  </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -159,22 +159,22 @@ const EditProduct = () => {
                   required
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
                 />
-              </div>
+                </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Stock
                 </label>
-                <input
-                  type="number"
-                  name="stock"
-                  value={formData.stock}
-                  onChange={handleChange}
-                  required
-                  min="0"
+                  <input
+                    type="number"
+                    name="stock"
+                    value={formData.stock}
+                    onChange={handleChange}
+                    required
+                    min="0"
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
-                />
-              </div>
+                  />
+                </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -184,8 +184,8 @@ const EditProduct = () => {
                   type="text"
                   name="brand"
                   value={formData.brand}
-                  onChange={handleChange}
-                  required
+                    onChange={handleChange}
+                    required
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
                 />
               </div>
@@ -212,14 +212,14 @@ const EditProduct = () => {
               {formData.existingImages.length > 0 && (
                 <div className="mb-4">
                   <p className="text-sm text-gray-600 mb-2">Current Images:</p>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {formData.existingImages.map((image, index) => (
                       <div key={index} className="relative">
-                        <img
+                    <img
                           src={image}
-                          alt={`Product ${index + 1}`}
+                      alt={`Product ${index + 1}`}
                           className="w-full h-32 object-cover rounded-lg"
-                        />
+                    />
                       </div>
                     ))}
                   </div>
@@ -229,12 +229,12 @@ const EditProduct = () => {
                 <label className="block text-sm text-gray-600 mb-2">
                   Upload New Images (Optional)
                 </label>
-                <input
-                  type="file"
+                    <input
+                      type="file"
                   name="images"
                   onChange={handleChange}
                   multiple
-                  accept="image/*"
+                      accept="image/*"
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
                 />
                 <p className="mt-1 text-sm text-gray-500">

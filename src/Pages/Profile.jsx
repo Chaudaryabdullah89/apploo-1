@@ -136,10 +136,10 @@ const Profile = () => {
 
   useEffect(() => {
     const initializeProfile = async () => {
-      if (!user) {
-        navigate('/login', { state: { from: '/profile' } });
-        return;
-      }
+    if (!user) {
+      navigate('/login', { state: { from: '/profile' } });
+      return;
+    }
 
       setIsLoading(true);
       try {

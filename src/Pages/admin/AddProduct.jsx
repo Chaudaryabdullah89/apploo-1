@@ -59,7 +59,7 @@ const AddProduct = () => {
 
       if (response.data) {
         toast.success('Product added successfully!');
-        navigate('/admin/products');
+      navigate('/admin/products');
       }
     } catch (error) {
       console.error('Error adding product:', error);
@@ -84,103 +84,103 @@ const AddProduct = () => {
 
         <div className="bg-white rounded-lg shadow-sm p-6">
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Product Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
+                    Product Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
-                />
-              </div>
+                  />
+                </div>
 
-              <div>
+                <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Brand
-                </label>
-                <input
-                  type="text"
-                  name="brand"
-                  value={formData.brand}
-                  onChange={handleChange}
-                  required
+                    Brand
+                  </label>
+                  <input
+                    type="text"
+                    name="brand"
+                    value={formData.brand}
+                    onChange={handleChange}
+                    required
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
-                />
+                  />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Price
                 </label>
-                <input
-                  type="number"
-                  name="price"
-                  value={formData.price}
-                  onChange={handleChange}
-                  required
-                  min="0"
-                  step="0.01"
+                    <input
+                      type="number"
+                      name="price"
+                      value={formData.price}
+                      onChange={handleChange}
+                      required
+                      min="0"
+                      step="0.01"
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
-                />
-              </div>
+                    />
+            </div>
 
-              <div>
+                <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Category
-                </label>
-                <input
+                  </label>
+                  <input
                   type="text"
                   name="category"
                   value={formData.category}
-                  onChange={handleChange}
+                    onChange={handleChange}
                   required
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
-                />
-              </div>
+                  />
+                </div>
 
-              <div>
+                <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Stock
-                </label>
-                <input
-                  type="number"
+                    </label>
+                    <input
+                      type="number"
                   name="stock"
                   value={formData.stock}
-                  onChange={handleChange}
+                      onChange={handleChange}
                   required
-                  min="0"
+                      min="0"
                   className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
                 />
               </div>
             </div>
 
-            <div>
+                <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Description
-              </label>
+                  </label>
               <textarea
                 name="description"
                 value={formData.description}
-                onChange={handleChange}
+                    onChange={handleChange}
                 required
                 rows="4"
                 className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-gray-200 focus:border-gray-400"
-              />
-            </div>
+                  />
+                </div>
 
-            <div>
+                <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Product Images
-              </label>
-              <input
+                  </label>
+                  <input
                 type="file"
                 name="images"
-                onChange={handleChange}
+                    onChange={handleChange}
                 accept="image/*"
                 multiple
                 required
@@ -189,16 +189,16 @@ const AddProduct = () => {
             </div>
 
             <div className="flex items-center">
-              <input
+                  <input
                 type="checkbox"
                 name="featured"
                 checked={formData.featured}
-                onChange={handleChange}
+                    onChange={handleChange}
                 className="h-4 w-4 text-gray-600 focus:ring-gray-500 border-gray-300 rounded"
-              />
+                  />
               <label className="ml-2 block text-sm text-gray-900">
                 Featured Product
-              </label>
+                  </label>
             </div>
 
             <div className="flex justify-end space-x-4">
