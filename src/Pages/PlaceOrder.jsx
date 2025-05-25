@@ -8,7 +8,7 @@ import api from '../utils/axios';
 import { toast } from 'react-toastify';
 import { useUserAuth } from '../Context/UserAuthContext';
 import { useCart } from '../Context/CartContext';
-import PaymentForm from '../components/PaymentForm';
+import PaymentForm from '../Components/PaymentForm';
 import Title from '../Components/Title';
 
 // Initialize Stripe
