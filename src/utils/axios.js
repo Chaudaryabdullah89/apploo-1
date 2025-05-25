@@ -2,7 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: 'https://appolo-db.vercel.app/api',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -61,7 +61,8 @@ api.interceptors.response.use(
         } else {
           localStorage.removeItem('token');
         }
-        // Don't redirect here, let the component handle it
+        // Redirect to login page
+        window.location.href = '/login';
       }
       
       toast.error(message);
