@@ -56,7 +56,10 @@
     "typescript": "^5.3.3",
     "vite": "^5.0.12",
     "vite-plugin-compression2": "^0.10.0",
-    "vitest": "^1.2.1"
+    "vitest": "^1.2.1",
+    "@react-oauth/google": "^0.12.2",
+    "dotenv": "^16.4.7"
+
   },
   "engines": {
     "node": ">=18.0.0"
