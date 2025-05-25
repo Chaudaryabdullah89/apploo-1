@@ -2,7 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const api = axios.create({
-  baseURL: 'https://appolo-db.vercel.app/api',
+  baseURL: 'https://appolo-db.vercel.app',
   headers: {
     'Content-Type': 'application/json',
   },

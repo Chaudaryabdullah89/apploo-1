@@ -4,16 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://accounts.google.com;
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://accounts.google.com;
-      img-src 'self' data: https:;
-      frame-src 'self' https://js.stripe.com https://accounts.google.com;
-      connect-src 'self' http://localhost:5000 https://api.stripe.com https://accounts.google.com;
-      font-src 'self' https://fonts.gstatic.com;
-    ">
-    <title>E-commerce App</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://appolo-db.vercel.app https://api.stripe.com https://accounts.google.com http://localhost:5000; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:;">
+    <title>Apollo E-commerce</title>
     <script src="https://accounts.google.com/gsi/client" async></script>
   </head>
   <body>
