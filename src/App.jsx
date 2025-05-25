@@ -31,7 +31,7 @@ import Register from './Pages/Register';
 import Profile from './Pages/Profile';
 import Collection from './Pages/Collection';
 import ProductDetails from './Pages/ProductDetails';
-import Cart from './Pages/Cart';
+import Cart from './Pages/cart';
 import Checkout from './Pages/Checkout';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
