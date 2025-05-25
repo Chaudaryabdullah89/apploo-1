@@ -41,6 +41,7 @@ export default defineConfig(({ command }) => ({
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
           ui: ['@headlessui/react', '@heroicons/react'],
+          google: ['@react-oauth/google']
         },
       },
     },
@@ -60,7 +61,8 @@ export default defineConfig(({ command }) => ({
   },
   resolve: {
     alias: {
-      '@': '/src'
+      '@': '/src',
+      '@react-oauth/google': '@react-oauth/google/dist/index.js'
     }
   },
   define: {
