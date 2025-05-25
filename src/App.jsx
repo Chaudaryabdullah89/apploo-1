@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Provider } from 'react-redux';
-import { GoogleOAuthProvider } from '@react-oauth/google/dist/index.js';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import { AnimatePresence } from 'framer-motion';

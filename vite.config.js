@@ -36,7 +36,6 @@ export default defineConfig(({ command }) => ({
       },
     },
     rollupOptions: {
-      external: ['@react-oauth/google'],
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
@@ -61,8 +60,7 @@ export default defineConfig(({ command }) => ({
   },
   resolve: {
     alias: {
-      '@': '/src',
-      '@react-oauth/google': '@react-oauth/google/dist/index.js'
+      '@': '/src'
     }
   },
   define: {
