@@ -11,6 +11,23 @@
   ],
   "routes": [
     {
+      "src": "/api/admin/(.*)",
+      "dest": "https://appolo-db.vercel.app/api/admin/$1",
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Allow-Origin": "https://apploo-1.vercel.app",
+        "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+        "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization"
+      }
+    },
+    {
+      "src": "/admin/(.*)",
+      "dest": "/index.html",
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate"
+      }
+    },
+    {
       "src": "/api/(.*)",
       "dest": "https://appolo-db.vercel.app/api/$1",
       "headers": {
