@@ -55,6 +55,7 @@ export default defineConfig(({ command }) => ({
         target: process.env.VITE_API_URL || 'https://appolo-db.vercel.app',
         changeOrigin: true,
         secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '')
       },
     },
   },
@@ -65,5 +66,6 @@ export default defineConfig(({ command }) => ({
   },
   define: {
     'process.env.NODE_ENV': JSON.stringify(command),
+    'process.env.VITE_API_URL': JSON.stringify(process.env.VITE_API_URL || 'https://appolo-db.vercel.app')
   },
 }))
