@@ -21,13 +21,6 @@
       }
     },
     {
-      "src": "/admin",
-      "dest": "/index.html",
-      "headers": {
-        "Cache-Control": "public, max-age=0, must-revalidate"
-      }
-    },
-    {
       "src": "/admin/(.*)",
       "dest": "/index.html",
       "headers": {
@@ -59,7 +52,10 @@
       "src": "/manifest.json",
       "dest": "/manifest.json"
     },
-
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html",
